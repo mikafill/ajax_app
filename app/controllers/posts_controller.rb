@@ -9,7 +9,7 @@ class PostsController < ApplicationController
   end
 
   def checked
-    post = Post.find(params[:content])
+    post = Post.find(params[:id])
     if post.checked
       post.update(checked: false)
     else
@@ -17,6 +17,6 @@ class PostsController < ApplicationController
     end
 
     item = Post.find(params[:id])
-    render json: {post: item}
+    render json: { post: item }
   end
 end
