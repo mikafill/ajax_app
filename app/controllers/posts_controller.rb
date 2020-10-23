@@ -13,6 +13,7 @@ class PostsController < ApplicationController
 >>>>>>> Stashed changes
   end
 
+  
   def checked
     post = Post.find(params[:id])
     if post.checked
@@ -25,3 +26,5 @@ class PostsController < ApplicationController
     render json: { post: item }
   end
 end
+
+
